@@ -113,6 +113,10 @@ img {
   overflow: hidden;
 }
 
+.img-cita {
+  border-radius: 30%;
+}
+
 /* 
 ---------------------------------------------
 global styles
