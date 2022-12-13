@@ -8,13 +8,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
     <title>LIVING WITH ANNIE</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/castellanomaikol/test-cite-anna', text: 'Hacer un cita', color: '#ba17cc', textColor: '#ffffff', branding: true }); }</script>
+<!-- Calendly badge widget end -->
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -81,7 +86,8 @@ https://templatemo.com/tm-573-eduwell
             <h6>¡Bienvenidos a livingwithannie!</h6>
             <h2>¿Por donde empezar un estilo de vida saludable? <em>¡Acá te ayudamos!</em></h2>
             <div class="main-button-gradient">
-              <div class="scroll-to-section"><a href="#contact-section">Saber más</s></a></div>
+              
+              <div class="scroll-to-section"><a href="about-us.html">Saber más</s></a></div>
             </div>
           </div>
         </div>
@@ -314,7 +320,8 @@ https://templatemo.com/tm-573-eduwell
           <h4>Obtén un 10% de descuento por una asesoria.</h4>
           <p>*Valído solo por página web*</p>
           <div class="white-button">
-            <a href="contact-us.html">Obtén tu cita ahora.</a>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/castellanomaikol/test-cite-anna'});return false;">Obtén una cita</a>
+<!-- Calendly link widget end -->
           </div>
         </div>
       </div>
@@ -409,7 +416,7 @@ https://templatemo.com/tm-573-eduwell
           </div>
         </div>
         <div class="col-lg-4">
-          <form id="contact" action="" method="post">
+          <form id="contact" action="https://getform.io/f/a852987b-cfc0-4029-a84c-37b1005b8bdd" method="post">
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-heading">
@@ -443,11 +450,11 @@ https://templatemo.com/tm-573-eduwell
         </div>
         <div class="col-lg-12">
           <ul class="social-icons">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li> -->
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
           </ul>
           <br>
         </div>
@@ -464,7 +471,7 @@ https://templatemo.com/tm-573-eduwell
   <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script src="assets/js/isotope.min.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/lightbox.js"></script>
@@ -508,11 +515,6 @@ https://templatemo.com/tm-573-eduwell
             }
           });
         };
-
-        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
-          e.preventDefault();
-          showSection($(this).attr('href'), true);
-        });
 
         $(window).scroll(function () {
           checkSection();
